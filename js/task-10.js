@@ -12,20 +12,24 @@ const creatBoxesRef = document.querySelector('#boxes');
  
   createBtn.addEventListener('click', CreateBoxes);
 
-let amount = 0;
+  let amount;
+  const allBoxes = [];
 
    function CreateBoxes() {
     amount = Number(inputRef.value);
-    console.log(amount);
 
     for(let i=1; i<= amount; i+=1 ) {
-    let div = document.createElement('div');
-      div.style.width = 20 + `${i}` * 10 +`px`;
-      div.style.height = 20 + `${i}` * 10 +`px`;
-      div.style.backgroundColor = getRandomHexColor();
+    let divRef = document.createElement('div');
+      divRef.classList.add("new-div");
+      divRef.style.width = 20 + `${i}` * 10 +`px`;
+      divRef.style.height = 20 + `${i}` * 10 +`px`;
+      divRef.style.backgroundColor = getRandomHexColor();
 
-     creatBoxesRef.appendChild(div);
-    }
+     allBoxes.push(divRef);
+     console.log(allBoxes);
+   } 
+    creatBoxesRef.append(...allBoxes);
+  
   };
 
 destroyBtn.addEventListener('click', ondestroyBoxes); 
