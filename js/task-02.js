@@ -1,44 +1,22 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
-const potatosItemRef = document.createElement('li');
-potatosItemRef.classList.add('item');
-potatosItemRef.textContent = 'Potatoes';
-// console.log(potatosItemRef);
 
-const mushroomsItemRef = document.createElement('li');
-mushroomsItemRef.classList.add('item');
-mushroomsItemRef.textContent = 'Mushrooms';
+const listRef = document.querySelector("#ingredients");
+const allItems = [];
 
-const garlikItemRef = document.createElement('li');
-garlikItemRef.classList.add('item');
-garlikItemRef.textContent = 'Garlic';
+for (let i = 0; i < ingredients.length; i += 1) {
+  console.log(ingredients[i]);
+  let newItem = document.createElement("li");
+  newItem.classList.add("item");
+  newItem.textContent = `${ingredients[i]}`;
 
-const tomatosItemRef = document.createElement('li');
-tomatosItemRef.classList.add('item');
-tomatosItemRef.textContent = 'Tomatos';
-
-const herbsItemRef = document.createElement('li');
-herbsItemRef.classList.add('item');
-herbsItemRef.textContent = 'Herbs';
-
-const condimentsItemRef = document.createElement('li');
-condimentsItemRef.classList.add('item');
-condimentsItemRef.textContent = 'Condiments';
-
-const listRef = document.querySelector('#ingredients');
-
-listRef.append(
-  potatosItemRef,
-  mushroomsItemRef,
-  garlikItemRef,
-  tomatosItemRef,
-  herbsItemRef,
-  condimentsItemRef
-);
-// console.log(listRef);
+  allItems.push(newItem);
+}
+listRef.append(...allItems);
+console.log(listRef);
