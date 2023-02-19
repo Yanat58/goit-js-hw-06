@@ -18,7 +18,7 @@ const listRef = document.querySelector("ul");
 const creatRowImages = images
   .map(
     (image) => `<li class= item>
-      <img src= ${image.url} alt = ${image.alt} width = 380 height = 280 /img> </li>`
+      <img src= ${image.url} alt = ${image.alt} width="380" height="280" /img> </li>`
   )
   .join("");
 

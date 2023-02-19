@@ -19,4 +19,3 @@ for (let i = 0; i < ingredients.length; i += 1) {
   allItems.push(newItem);
 }
 listRef.append(...allItems);
-console.log(listRef);

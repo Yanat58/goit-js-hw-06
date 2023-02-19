@@ -5,9 +5,9 @@ const refs = {
 refs.input.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
-  console.log(event.currentTarget.value);
-  refs.nameSpan.textContent = event.currentTarget.value;
-  if (event.currentTarget.value === "") {
+  console.log(event.target.value);
+  refs.nameSpan.textContent = event.target.value;
+  if (event.target.value === "") {
     refs.nameSpan.textContent = "Anonymous";
   }
 }

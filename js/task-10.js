@@ -14,7 +14,7 @@ createBtn.addEventListener('click', CreateBoxes);
 let amount;
 const allBoxes = [];
 
-function CreateBoxes(event) {
+function CreateBoxes() {
   amount = Number(inputRef.value);
 
   for (let i = 1; i <= amount; i += 1) {
@@ -28,9 +28,13 @@ function CreateBoxes(event) {
     console.log(allBoxes);
   }
   creatBoxesRef.append(...allBoxes);
+   allBoxes.length = 0;
+ 
 }
 
 destroyBtn.addEventListener('click', ondestroyBoxes);
 function ondestroyBoxes() {
+  allBoxes.length = 0;
+  inputRef.value = '';
   creatBoxesRef.innerHTML = '';
 }
