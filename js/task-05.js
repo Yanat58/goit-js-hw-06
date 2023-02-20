@@ -1,13 +1,13 @@
 const refs = {
-  input: document.querySelector("#name-input"),
-  nameSpan: document.querySelector("#name-output"),
+  input: document.querySelector('#name-input'),
+  nameSpan: document.querySelector('#name-output'),
 };
-refs.input.addEventListener("input", onInputChange);
+refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  console.log(event.target.value);
+  // console.log(event.target.value);
   refs.nameSpan.textContent = event.target.value;
-  if (event.target.value === "") {
-    refs.nameSpan.textContent = "Anonymous";
+  if (event.target.value.trim() === '') {
+    refs.nameSpan.textContent = 'Anonymous';
   }
 }
