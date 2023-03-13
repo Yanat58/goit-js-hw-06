@@ -9,3 +9,14 @@ for (let i = 0; i < listRef.children.length; i += 1) {
   console.log(`Category:`, titleRef);
   console.log(`Elements:`, itemListRef);
 }
+
+// const listRef = document.querySelector('#categories');
+
+// const itemsRef = listRef.children.length;
+
+// console.log('Number of categories:', itemsRef);
+
+// for (let i = 0; i < itemsRef; i += 1) {
+//   console.log('Category:', listRef.children[i].firstElementChild.textContent);
+//   console.log('Elements', listRef.children[i].lastElementChild.children.length);
+// }
